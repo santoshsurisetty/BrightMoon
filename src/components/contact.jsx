@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
+import { SocialLink } from './socialLink';
 
 const initialState = {
   name: '',
@@ -116,45 +117,13 @@ export const Contact = (props) => {
             <div className='contact-item'>
               <p>
                 <span>
-                  <i className='fa fa-envelope-o'></i> Email
+                  <i className='far fa-envelope'></i> Email
                 </span>{' '}
                 {props.data ? props.data.email : 'loading'}
               </p>
             </div>
           </div>
-          <div className='col-md-12'>
-            <div className='row'>
-              <div className='social'>
-                <ul>
-                  <li>
-                    <a href={props.data ? props.data.facebook : '/'}>
-                      <i className='fa fa-facebook'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.twitter : '/'}>
-                      <i className='fa fa-twitter'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.discord : '/'}>
-                      <i className='fa fa-discord'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.telegram : '/'}>
-                      <i className='fa fa-telegram'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.youtube : '/'}>
-                      <i className='fa fa-youtube'></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <SocialLink />
         </div>
       </div>
       <div id='footer'>
